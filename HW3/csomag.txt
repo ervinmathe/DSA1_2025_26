@@ -1,0 +1,9 @@
+8
+Kovacs Janos;5;1;0
+Nagy Maria;12;0;1
+Szabo Peter;3;2;1
+Toth Anna;8;1;0
+Horvath Bela;20;3;0
+Kiss Eva;1;0;0
+Varga Istvan;7;2;1
+Fekete Zoltan;15;1;1
