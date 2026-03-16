@@ -170,5 +170,4 @@ float averageOfMatrixElements(int rows, int cols, int **pMatrix);
 
 int intigerNumbersOfArray(int n , float *pArray) ;
 
-
 #endif
