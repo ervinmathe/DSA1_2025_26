@@ -20,7 +20,14 @@ int main() {
 
   printf("Inorder: ");
   inorderTraversal(root);
-  printf("\n");
+  printf("\n\n");
+
+  Node *tolvaj = root;
+  printf("A tolvaj utja: ");
+  while (tolvaj != NULL) {
+    printf("%s %d ", tolvaj->info.nev, tolvaj->info.info);
+    tolvaj = tolvaj->right;
+  }
 
   fclose(file);
   destroyBinaryTree(&root);
