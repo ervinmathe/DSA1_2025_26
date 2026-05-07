@@ -12,12 +12,15 @@ int main() {
   int n;
   fscanf(file, "%d", &n);
 
-  printf("%d", n);
   HAZ temp;
   Node *root = NULL;
   while (fscanf(file, "%s\n%d", temp.nev, &temp.info) == 2) {
-    printf("JA");
+    root = insert(root, temp);
   }
+
+  printf("Inorder: ");
+  inorderTraversal(root);
+  printf("\n");
 
   fclose(file);
   destroyBinaryTree(&root);
