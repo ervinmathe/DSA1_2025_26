@@ -30,10 +30,10 @@ int main() {
   }
 
   tolvaj = root;
-  while (tolvaj->left != NULL) {
-    tolvaj = tolvaj->left;
+  while (tolvaj != NULL) {
+    tolvaj = tolvaj->right;
   }
-  printf("\n\n");
+
   deleteNode(root, tolvaj->info);
   inorderTraversal(root);
 
