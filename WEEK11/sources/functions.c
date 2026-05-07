@@ -2,7 +2,7 @@
 #include "..headers/constants.h"
 #include <stdio.h>
 #include <stdlib.h>
-Node *createNewNode(int newData) {
+Node *createNewNode(HAZ newData) {
   Node *newItem = (Node *)malloc(sizeof(Node));
   if (!newItem) {
     printf(MEMORY_ALLOCATION_ERROR_MESSAGE);
@@ -16,7 +16,7 @@ void inorderTraversal(Node *root) {
   if (root == NULL)
     return;
   inorderTraversal(root->left);
-  printf("%d ", root->info);
+  printf("%s %d ", root->info.nev, root->info.info);
   inorderTraversal(root->right);
 }
 void destroyBinaryTree(Node **root) {
@@ -34,7 +34,7 @@ Node *insert(Node *node, int key) {
   if (node == NULL) {
     return createNewNode(key);
   }
-  if (node->info < key) {
+  if (node->info.info < key) {
     node->right = insert(node->right, key);
   } else {
     node->left = insert(node->left, key);
@@ -59,9 +59,9 @@ Node *deleteNode(Node *root, int key) {
   if (root == NULL) {
     return NULL;
   }
-  if (root->info < key) {
+  if (root->info.info < key) {
     root->right = deleteNode(root->right, key);
-  } else if (root->info > key) {
+  } else if (root->info.info > key) {
     root->left = deleteNode(root->left, key);
   } else {
     // node to be deleted
@@ -79,9 +79,9 @@ Node *deleteNode(Node *root, int key) {
     }
     // Node *temp = minValueNode(root->right);
     Node *temp = maxValueNode(root->left);
-    root->info = temp->info;
+    root->info.info = temp->info.info;
     // deleteNode(root->right, temp->info);
-    deleteNode(root->left, temp->info);
+    deleteNode(root->left, temp->info.info);
   }
   return root;
 }

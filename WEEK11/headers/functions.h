@@ -12,7 +12,7 @@ typedef struct HAZ {
   char nev[12];
 } HAZ;
 typedef struct Node {
-  int info;
+  HAZ info;
   struct Node *left, *right;
 } Node;
 /**

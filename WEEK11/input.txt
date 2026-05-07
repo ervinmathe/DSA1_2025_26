@@ -1,0 +1,15 @@
+7
+Anna
+30 
+Bela
+20
+Csaba
+40
+Dora
+10
+Elemer
+25
+Ferenc
+35
+Gabor
+50
